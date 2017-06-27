@@ -49,3 +49,4 @@ numero1=document.getElementById("numeroUno").value;
 numero2=document.getElementById("numeroDos").value;
 resultado= (parseInt(numero1) / parseInt(numero2));
 alert("El resultado de la divicion es:" +resultado);
+}
