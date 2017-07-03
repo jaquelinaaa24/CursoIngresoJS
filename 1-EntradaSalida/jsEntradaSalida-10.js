@@ -6,11 +6,11 @@ function MostrarAumento()
 {
 var importe;
 var descuento;
-var importeFinal;
-importe=document.getElementById("importe").value;
-var descuento=(importe*0.25);
-var importeFinal=(importe-descuento);
-
-
+var resultado;
+importe=parseInt(document.getElementById("importe").value);
+descuento=(importe * 0.75);
+resultado=(importe-descuento);
+document.getElementById("resultado").value=resultado;
 
 }
+
