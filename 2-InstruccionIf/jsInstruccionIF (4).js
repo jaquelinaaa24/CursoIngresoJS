@@ -1,7 +1,13 @@
+/*Al ingresar una edad debemos informar si la persona es
+adolescente, edad entre 13 y 17 años (inclusive)*/
+
 function Mostrar()
 {
-//tomo la edad  
+    var edad;
+    edad=document.getElementById("edad").value;
 
-
-
-}//FIN DE LA FUNCIÓN
+    if(edad>=13 && edad<=17)
+    {
+    alert("La persona es adolescente");
+    }
+}
