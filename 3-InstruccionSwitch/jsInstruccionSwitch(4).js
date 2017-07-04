@@ -39,3 +39,33 @@ switch(mes)
  }
 }
 }
+AHORA CON IF
+
+function Mostrar()
+{
+  var mes;
+  mes=document.getElementById("mes").value;
+  
+  if(mes=="Enero" || mes=="Octubre" || mes=="Marzo" || mes=="Mayo" || mes=="Julio" || mes=="Agosto" || mes=="Septiembre" || mes=="Agosto" || mes=="Diciembre")
+  {
+    alert("Este mes tiene 31 dias");
+  }
+
+  else
+  {
+   if(mes=="Noviembre" || mes=="Junio" || mes=="Septiembre" || mes=="Abril")
+  {
+    alert("Este mes tiene 30 dias");
+  }
+  else
+  {
+   alert("Este mes tiene 28 dias");
+  }
+  }
+}
+
+
+
+
+
+
