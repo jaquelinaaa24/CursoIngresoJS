@@ -63,3 +63,27 @@ break
 }
 
 }
+
+CON IF:
+
+function Mostrar()
+{
+var hora;
+hora=document.getElementById("hora").value;
+
+if(hora=="07" || hora=="08" || hora=="09" || hora=="10" || hora=="11")
+{
+ alert("Es de mañana");
+}
+else if(hora=="12" || hora=="13" || hora=="14" || hora=="15" || hora=="16" || hora=="17" || hora=="18" || hora=="19")
+ {
+    alert("Es de tarde");
+ }
+ else if(hora=="20" || hora=="21" || hora=="22" || hora=="23" || hora=="24")
+{
+    alert("Es de noche");
+}
+ else{
+     alert("NO EXISTE");
+ }
+}
