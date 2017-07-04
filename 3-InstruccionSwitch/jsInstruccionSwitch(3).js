@@ -21,3 +21,21 @@ alert("Este mes tiene 30 o más días");
 break;
 }
 }
+
+AHORA CON IF:
+
+function Mostrar()
+{
+var mes;
+mes=document.getElementById("mes").value;
+
+if(mes=="Febrero")
+{
+ alert("Este mes no tiene mas de 29 dias");
+}
+else
+{
+ alert("Este mes tiene 30 o mas dias");
+}
+
+}
