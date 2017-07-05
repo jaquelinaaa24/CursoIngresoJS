@@ -36,7 +36,8 @@ precioUno=document.getElementById("PrecioUno").value;
 precioDos=document.getElementById("PrecioDos").value;
 precioTres=document.getElementById("PrecioTres").value;
 
-resultado=parseInt(precioUno)+parseInt(precioDos)+parseInt(precioTres)*1.21
+resultado=(parseInt(precioUno)+parseInt(precioDos)+parseInt(precioTres))*1.21 /*se ponen los parentesis para que resuelba
+ todo primero eso y despues lo multiplique*/
 alert("El precio final es: "  +resultado);
 
 }
