@@ -8,9 +8,9 @@ el usuario quiera, mostar:
 
 function Mostrar()
 { 
-    var numero;
-	var positivo=0;
-	var negativo=0;
+    var numero; //no se iniciliza porque guardamos datos
+	var acumuladorPositivo=0;
+	var acumuladorNegativo=0;
 	var contadorNegativos = 0;
 	var contadorPositivos = 0;
 	var contadorDeCeros= 0;
@@ -20,7 +20,7 @@ function Mostrar()
 	var diferenciaPositivosNegativos;
 	var respuesta  = true;
 
-	while(respuesta){
+	while(respuesta){ //se usa para confirmar algo le pongo un valor tenemos que asegurarnos de que la primera vez ingrese por eso la inicialiamos en true. 
 		
 		numero = prompt('ingrese un numero');
 		numero = parseInt(numero);
@@ -29,45 +29,45 @@ function Mostrar()
 			numero = prompt('Ingrese Solo Numeros');
 			numero = parseInt(numero);
 		}
-		if(numero>=0)
+		if(numero>0)
 		{
-			positivo = positivo + numero;
-			contadorPositivos = contadorPositivos +1;
+			acumuladorPositivo = acumuladorPositivo + numero;
+			contadorPositivos = contadorPositivos+1;
 		}
-		else
+		 else if(numero<0)
 			{
-			negativo = negativo + numero;
+			acumuladorNegativo = acumuladorNegativo + numero;
 			contadorNegativos = contadorNegativos +1;
 		    }
-		if(numero==0)
+		 else
 		{
 		 contadorDeCeros= contadorDeCeros +1;
 		}
 
-		else if(numero%2==0)
+	    if(numero%2==0)
 		{
 		contadorNumerosPares=contadorNumerosPares+1;
 	    }
 		
 		respuesta = confirm('Seguir Ingresando ? ') ;
 	}
-	promedioPositivos=positivo/contadorPositivos;
-	promedioNegativos=negativo/contadorNegativos;
-	diferenciaPositivosNegativos=(parseInt(positivo) + parseInt(negativo));
-
+	promedioPositivos=acumuladorPositivo/contadorPositivos;
+	promedioNegativos=acumuladorNegativo/contadorNegativos;
+	diferenciaPositivosNegativos=(parseInt(contadorPositivos) - parseInt(contadorNegativos));
 	
-	/*pro_pos = sum_pos / c_pos;
-	pro_neg = sum_neg / c_neg;
+	if(diferenciaPositivosNegativos<0)
+	{
+	diferenciaPositivosNegativos=diferenciaPositivosNegativos*1;
+	}
 
-	dif_pos_neg = sum_pos + sum_neg;*/
-
-	document.write("La suma de los numeros positivos es: "+positivo ,"<br/>");
-	document.write("La suma de los numeros negativos es: " +negativo ,"<br/>") ;
-    document.write("Cantidad de numeros positivos ingresados:  "+contadorPositivos+ "<br/>");
-	document.write("Cantidad de numeros negstivos ingresados: "+contadorNegativos,"<br/>");
+	document.write("La suma de los numeros positivos es: "+acumuladorPositivo ,"<br/>");
+	document.write("La suma de los numeros negativos es: " +acumuladorNegativo ,"<br/>") ;
+    document.write("Cantidad de numeros positivos ingresados:  "+contadorPositivos ,"<br/>");
+	document.write("Cantidad de numeros negativos ingresados: "+contadorNegativos,"<br/>");
     document.write("Cantidad de ceros: "+contadorDeCeros,"<br/>");
 	document.write("Cantidad de numeros Pares: "+contadorNumerosPares,"<br/>");
 	document.write("Promedio de numeros Positivos : "+promedioPositivos,"<br/>");
 	document.write("La diferencia de positivos y negativos es: "+diferenciaPositivosNegativos,"<br/>");
 
 }
+
