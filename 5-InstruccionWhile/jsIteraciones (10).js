@@ -18,6 +18,7 @@ function Mostrar()
 	var promedioPositivos;
 	var promedioNegativos;
 	var diferenciaPositivosNegativos;
+	var resultado;
 	var respuesta  = true;
 
 	while(respuesta){ //se usa para confirmar algo le pongo un valor tenemos que asegurarnos de que la primera vez ingrese por eso la inicialiamos en true. 
@@ -51,13 +52,20 @@ function Mostrar()
 		
 		respuesta = confirm('Seguir Ingresando ? ') ;
 	}
+	if(contadorPositivos>0)
+	{
 	promedioPositivos=acumuladorPositivo/contadorPositivos;
-	promedioNegativos=acumuladorNegativo/contadorNegativos;
-	diferenciaPositivosNegativos=(parseInt(contadorPositivos) - parseInt(contadorNegativos));
-	
+	}
+	/*promedioNegativos=acumuladorNegativo/contadorNegativos;
+	diferenciaPositivosNegativos=(parseInt(contadorPositivos) - parseInt(contadorNegativos));*/
+	else
+	{
+    alert=("no hay numeros negativos"); 
+	}
+	diferenciaPositivosNegativos=contadorPositivos-contadorNegativos;
 	if(diferenciaPositivosNegativos<0)
 	{
-	diferenciaPositivosNegativos=diferenciaPositivosNegativos*1;
+	diferenciaPositivosNegativos=diferenciaPositivosNegativos*-1;
 	}
 
 	document.write("La suma de los numeros positivos es: "+acumuladorPositivo ,"<br/>");
@@ -67,7 +75,8 @@ function Mostrar()
     document.write("Cantidad de ceros: "+contadorDeCeros,"<br/>");
 	document.write("Cantidad de numeros Pares: "+contadorNumerosPares,"<br/>");
 	document.write("Promedio de numeros Positivos : "+promedioPositivos,"<br/>");
-	document.write("La diferencia de positivos y negativos es: "+diferenciaPositivosNegativos,"<br/>");
+	document.write("La diferencia de positivos y negativos es: "+diferenciaPositivosNegativos ,"<br/>");
 
 }
+
 
