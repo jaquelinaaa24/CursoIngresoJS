@@ -1,8 +1,15 @@
+/*al presionar el botón pedir la cantidad 
+de veces que quiero repetir el mensaje "Hola UTN FRA"*/
+
+
 function Mostrar()
 {
 
-var repetciones = prompt("ingrese el número de repeticiones");
+var cantidad = prompt("ingrese el número de repeticiones");
+var i;
 
-
-
-}//FIN DE LA FUNCIÓN
+for( i=0 ; i<cantidad ; i++)
+{
+alert("Hola UTNFRA");
+}
+}
